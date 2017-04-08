@@ -1,5 +1,9 @@
 module.exports = function(app, _db) {
 
+    app.get('/', function(req, res) {
+        res.send('funfou');
+    })
+
     app.get('/api/user', function(req, res) {
 
         _db.collection('teste').find().toArray(function(err, result) {
